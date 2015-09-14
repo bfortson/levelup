@@ -1,2 +1,2 @@
-# levelup
-Git repository for level courses
+Time to get this party started. # levelup
+Git repository for levelup courses
