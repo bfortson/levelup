@@ -1,0 +1,9 @@
+#Two examples for exercise one. The first uses the tr(from_str,to_str) method which returns a copy of str wtih corresponding characters in to_str. The second uses sub(pattern,replacement)
+
+rb(main):004:0> "Bprfnt".tr('prf', 'rya')
+#0:(irb):4:Object:-: -
+=> "Bryant"
+
+irb(main):008:0> "vanilla_ice sang it".sub('vanilla_ice', 'queen')
+#0:(irb):8:Object:-: -
+=> "queen sang it"

@@ -1,0 +1,33 @@
+class Arrowhead
+  2   # This seriously belongs in a database.
+  3   CLASSIFICATIONS = {
+  4     far_west: {
+  5       notched: "Archaic Side Notch",
+  6       stemmed: "Archaic Stemmed",
+  7       lanceolate: "Agate Basin",
+  8       bifurcated: "Cody",
+  9     },
+ 10     northern_plains: {
+ 11       notched: "Besant",
+ 12       stemmed: "Archaic Stemmed",
+ 13       lanceolate: "Humboldt Constricted Base",
+ 14       bifurcated: "Oxbow",
+ 15     },
+ 16   }
+ 17
+ 18   # FIXME: I don't have time to deal with this.
+ 19    def self.classify(region, shape)
+ 20      if CLASSIFICATIONS.include? region
+ 21        shapes = CLASSIFICATIONS[region]
+ 22        else
+ 23        raise "Unknown region, please provide a valid region."
+ 24      end
+ 25      if shapes.include? shape
+ 26        arrowhead = shapes[shape]
+ 27        "You have a(n) '#{arrowhead}' arrowhead. Probably priceless."
+ 28        else
+ 29        raise "Unknown shape value. Are you sure you know what you're talking about?"
+ 30        end
+ 31     end
+ 32 end
+ 33   puts Arrowhead.classify(:northern_plains, :bifurcated)
